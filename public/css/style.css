@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+          justify-content: flex-start;
+  background-color: grey;
+  padding: 10px;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+  background-color: black;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+.card .immagineAlbum {
+  width: 290px;
+  height: 290px;
+}
+
+.titoloAlbum,
+.artistaAlbum,
+.annoAlbum {
+  color: #ffffff;
+}
+
