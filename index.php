@@ -19,6 +19,6 @@
       }
       ?>
     </div>
-    <script src="public/js/script.js" charset="utf-8"></script>
+    
   </body>
 </html>

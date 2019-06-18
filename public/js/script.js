@@ -10705,6 +10705,17 @@ return jQuery;
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
+$.ajax({
+  'url': 'http://localhost:8888/booleanProjects/php-dischi/datab.php',
+  'method': "GET",
+  'success': function success(data) {
+    console.log(JSON.parse(data));
+  },
+  'error': function error() {
+    alert("Ops, qualcosa è andato storto");
+  }
+});
+
 /***/ }),
 
 /***/ "./src/scss/style.scss":
