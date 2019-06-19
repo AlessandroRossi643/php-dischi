@@ -10705,11 +10705,24 @@ return jQuery;
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
+var source = $('#template-dischi').html();
+var template_function = Handlebars.compile(source);
 $.ajax({
   'url': 'http://localhost:8888/booleanProjects/php-dischi/datab.php',
   'method': "GET",
   'success': function success(data) {
-    console.log(JSON.parse(data));
+    var dischi = JSON.parse(data);
+
+    for (var i = 0; i < dischi.length; i++) {
+      var compile = {
+        'immagine': dischi[i].immagine,
+        'titolo': dischi[i].titolo,
+        'artista': dischi[i].artista,
+        'anno': dischi[i].anno
+      };
+      var html = template_function(compile);
+      $('.container').append(html);
+    }
   },
   'error': function error() {
     alert("Ops, qualcosa è andato storto");
