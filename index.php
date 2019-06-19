@@ -11,6 +11,10 @@
   </head>
   <body>
     <header>
+      <form class="search" action="">
+        <input type="search" id="searchArtist" placeholder="Cerca artista..">
+        <input type="submit" value="CERCA">
+      </form>
     </header>
 
     <div class="container">
